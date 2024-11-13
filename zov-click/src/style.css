@@ -42,6 +42,12 @@ header nav ul li img {
     height: 50px;
     margin-right: 15px;
 }
+.footer {
+
+
+    width: 100%;
+    height: 10%;
+}
 
 .score{
     color: white;
