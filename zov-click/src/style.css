@@ -35,12 +35,24 @@ header nav ul {
 .pr_bar {
     width: 200px;
     height: 25px;
+    background: #24261B;
+    border-radius: 50px;
 }
 
 .bg {
-    width: 100%;
+    width: 50%;
     height: 100%;
-    background-color: #24261B;
+    background-color: #CBEF26;
+    border-radius: 50px;
+}
+
+.rang {
+    color: #fff;
+    text-align: center;
+}
+
+#num {
+    float: right;
 }
 
 header nav ul li img {
