@@ -105,8 +105,6 @@ function updateScore(newScore) {
     // Устанавливаем ширину фона
     scoreElement.style.setProperty('--width', (percentage) + '%');
 
-    // Обновляем отображение счета
-    scoreElement.textContent = score;
 
     // Если процент достиг 100, сбрасываем ширину прогресс-бара
     if (percentage > 100) {
