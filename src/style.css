@@ -136,15 +136,15 @@ header {
 
 .circle {
     width: 100vw;
-    height: 50%;
+    height: 65%;
     display: flex;
     justify-content: center;
     align-items: center;
     transform-style: preserve-3d;
 }
 .image {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     position: relative;
     transition: transform 0.2s ease;
