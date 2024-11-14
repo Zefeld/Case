@@ -129,8 +129,6 @@ header {
 
 }
 
-
-
 .score{
     color: white;
     text-align: center;
@@ -142,17 +140,19 @@ header {
 
 .circle {
     width: 100vw;
-    height: 50%;
+    height: 65%;
     display: flex;
     justify-content: center;
     align-items: center;
     transform-style: preserve-3d;
 }
 .image {
+
     aspect-ratio: 1 / 1;
     --size: clamp(200px, 80vw, 300px);
     width:  var(--size);
     height:  var(--size);
+
     border-radius: 50%;
     position: relative;
     transition: transform 0.2s ease;
