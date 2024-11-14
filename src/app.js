@@ -1,6 +1,7 @@
 const $circle = document.querySelector('#circle');
 const $score = document.querySelector('#score');
 const progressBarEnergy = document.querySelector('.pr_bar_energy'); // Ссылка на прогресс-бар энергии
+const curEnergyElement = document.querySelector('.cur_energy');
 let restoreEnergyInterval; // Переменная для хранения интервала восстановления энергии
 
 function start() {
@@ -84,7 +85,8 @@ updateScore(score);
 
 // Функция инициализации энергии
 function initializeEnergy() {
-    progressBarEnergy.style.width = '100%'; // Устанавливаем начальное значение энергии на 100%
+    progressBarEnergy.style.width = '100%';
+    curEnergyElement.textContent = '100';// Устанавливаем начальное значение энергии на 100%
     startEnergyRestoration(); // Запускаем восстановление энергии
 }
 
@@ -95,8 +97,8 @@ function decreaseEnergy() {
     let newEnergy = currentEnergy - 1; // Уменьшаем на 10% при каждом клике
     if (progressBarEnergy.style.width != '0%') {
         progressBarEnergy.style.width = newEnergy + '%';
+        curEnergyElement.textContent = newEnergy;
     }
-    console.log(typeof(progressBarEnergy.style.width))
 }
 
 // Функция восстановления энергии
@@ -108,6 +110,7 @@ function restoreEnergy() {
             newEnergy = 100; // newEnergy = 100; // Ограничиваем восстановление до 100%
         }
         progressBarEnergy.style.width = newEnergy + '%';
+        curEnergyElement.textContent = newEnergy;
     }
 }
 
