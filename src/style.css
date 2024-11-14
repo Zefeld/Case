@@ -5,6 +5,7 @@ html, body {
     width: 100%;
     background: black;
     user-select: none;
+    overflow: hidden;
     
 }
 body {
@@ -15,6 +16,8 @@ body {
 header {
     /* height: 10%; */
     height: 100px;
+    box-sizing: border-box;
+    padding: 15px;
     width: 100%;
     display: flex;
     gap:10px;
@@ -22,6 +25,7 @@ header {
     justify-content: center;
     align-items: center;
     justify-items: center;
+
     img {
         height: 70%;
     }
@@ -145,8 +149,10 @@ header {
     transform-style: preserve-3d;
 }
 .image {
-    width: 300px;
-    height: 300px;
+    aspect-ratio: 1 / 1;
+    --size: clamp(200px, 80vw, 300px);
+    width:  var(--size);
+    height:  var(--size);
     border-radius: 50%;
     position: relative;
     transition: transform 0.2s ease;
