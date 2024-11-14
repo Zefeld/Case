@@ -53,9 +53,37 @@ $circle.addEventListener('click', (event) => {
 
 start();
 
-const bg = document.querySelector('.bg');
+let score = parseInt(localStorage.getItem('score')) || 0; // Получаем значение из localStorage или 0, если его нет
+const scoreElement = document.getElementById('score');
+const progressBarBackground = document.querySelector('.pr_bar .bg');
 
-bg.addEventListener('click', () => {
-    const value = Math.floor(math.random() * 100);
-    bg.style.setProperty("--bg", `${value}`);
-})
+function updateScore(newScore) {
+    score = newScore;
+
+    // Предположим, максимальное количество очков для заполнения - 100
+    const maxScore = 100000;
+    let percentage = (score / maxScore) * 100;
+
+    // Устанавливаем ширину фона
+    progressBarBackground.style.width = percentage + '%';
+
+    // Обновляем отображение счета
+    scoreElement.textContent = score;
+
+    // Если процент достиг 100, сбрасываем ширину прогресс-бара
+    if (percentage > 100) {
+        progressBarBackground.style.width = '0%'; // Сбрасываем ширину прогресс-бара
+    }
+    // Сохраняем текущее значение score в localStorage
+    localStorage.setItem('score', score);
+}
+
+// Инициализируем прогресс-бар при загрузке страницы
+updateScore(score);
+
+
+// Пример увеличения счета
+document.getElementById('circle').addEventListener('click', () => {
+    updateScore(score + 1); // увеличиваем счет на 1 при клике
+});
+
