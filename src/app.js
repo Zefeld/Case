@@ -21,64 +21,102 @@ function getScore() {
 function addOne() {
     if (parseFloat(progressBarEnergy.style.width) > 0) { // Проверяем, есть ли энергия
         setScore(getScore() + 1);
+        decreaseEnergy();
     }
 }
+function createTiltMatrix(tiltX, tiltY) {
+    const radX = (tiltX * Math.PI) / 180; // Преобразуем градусы в радианы
+    const radY = (tiltY * Math.PI) / 180;
 
-$circle.addEventListener('click', (event) => {
-    const rect = event.target.getBoundingClientRect();
+    // Значения для матрицы на основе углов наклона
+    const cosX = Math.cos(radX);
+    const sinX = Math.sin(radX);
+    const cosY = Math.cos(radY);
+    const sinY = Math.sin(radY);
 
-    const offsetX = event.clientX - rect.left - rect.width / 2;
-    const offsetY = event.clientY - rect.top - rect.height / 2;
+    // Создаем матрицу на основе наклона по X и Y
+    return [
+        cosY, sinX * sinY, -sinY, 0, // Позиции для поворота вокруг Y
+        0, cosX, sinX, 0,            // Позиции для поворота вокруг X
+        sinY, -sinX * cosY, cosY * cosX, 0, // Позиции для Z
+        0, 0, 0, 1                   // Оставляем 4x4 матрицу с идентификатором
+    ].join(',');
+}
 
-    const DEG = 20;
-    const tiltX = (offsetY / (rect.height / 2)) * -DEG;
-    const tiltY = (offsetX / (rect.width / 2)) * DEG;
+const DEG = 20;
+const duration = 2000;
+$circle.addEventListener('click', createPlusOneEffect);
+$circle.addEventListener('touchstart', createPlusOneEffect);
+function createPlusOneEffect(event) {
+    // Определяем координаты клика и немного рандомизируем их
+    const x = (event.clientX || event.touches[0].clientX);
+    const y = (event.clientY || event.touches[0].clientY);
+    // Вычисляем наклон на основе координат клика относительно центра элемента
+    const rect = $circle.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
 
-    $circle.style.setProperty('--tiltX', `${tiltX}deg`);
-    $circle.style.setProperty('--tiltY', `${tiltY}deg`);
+    // Вычисляем отклонения от центра
+    const offsetX = centerX - event.clientX;
+    const offsetY = centerY - event.clientY;
+
+    const tiltX = (offsetY / (rect.height / 2)) * DEG;
+    const tiltY = -(offsetX / (rect.width / 2)) * DEG;
+
+    // Применяем матрицу 3D с параметрами наклона
+    const matrix = createTiltMatrix(tiltX, tiltY);
+    $circle.style.transform = `matrix3d(${matrix})`;
+    // Возвращаем в исходное положение после задержки
     setTimeout(() => {
-        $circle.style.setProperty('--tiltX', `0deg`);
-        $circle.style.setProperty('--tiltY', `0deg`);
-    }, 300)
+        $circle.style.transform = 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)';
+    }, 300);
 
+    // Создаем элемент +1
     const plusOne = document.createElement('div');
-    plusOne.classList.add('plusOne');
     plusOne.textContent = '+1';
-    plusOne.style.left = `${event.clientX - rect.left}px`;
-    plusOne.style.top = `${event.clientY - rect.top}px`;
+    plusOne.classList.add('plusOne');
+    plusOne.style.left = `${x - 20 + Math.random() * 20}px`;
+    plusOne.style.top = `${y - 10}px`;
+    // Добавляем элемент в body
+    document.body.appendChild(plusOne);
+    // Задержка для анимации +1
+    setTimeout(() => {
+        addOne(); // вызываем дополнительную функцию, если необходимо
+    }, 10);
 
-    $circle.parentElement.appendChild(plusOne);
-
-    // Уменьшаем энергию при клике
-    decreaseEnergy();
-
-    // Увеличиваем счет, если есть энергия
-    addOne();
-
+    // Удаление элемента после завершения анимации
     setTimeout(() => {
         plusOne.remove();
-    }, 2000)
-})
+    }, duration);
+}
 
 start();
 //lvl
 let score = parseInt(localStorage.getItem('score')) || 0;
-const scoreElement = document.getElementById('score');
-const progressBarBackground = document.querySelector('.pr_bar .bg');
+const scoreElement = document.getElementById('progress');
 
 function updateScore(newScore) {
     score = newScore;
-    const maxScore = 100000;
+
+    // Предположим, максимальное количество очков для заполнения - 100
+    const maxScore = 5000;
     let percentage = (score / maxScore) * 100;
 
-    progressBarBackground.style.width = percentage + '%';
+    // Устанавливаем ширину фона
+    scoreElement.style.setProperty('--width', (percentage) + '%');
+
+    // Обновляем отображение счета
     scoreElement.textContent = score;
 
+    // Если процент достиг 100, сбрасываем ширину прогресс-бара
     if (percentage > 100) {
-        progressBarBackground.style.width = '0%';
+        scoreElement.style.setProperty('--width', '100%'); // Сбрасываем ширину прогресс-бара
     }
+    // Сохраняем текущее значение score в localStorage
     localStorage.setItem('score', score);
 }
+
+
 
 // Инициализируем прогресс-бар при загрузке страницы
 updateScore(score);
