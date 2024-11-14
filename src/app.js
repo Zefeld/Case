@@ -20,8 +20,10 @@ function getScore() {
 
 function addOne() {
     if (parseFloat(progressBarEnergy.style.width) > 0) { // Проверяем, есть ли энергия
-        setScore(getScore() + 1);
+       let score = getScore();
+        setScore( score+ 1);
         decreaseEnergy();
+        updateScore(score+1)
     }
 }
 function createTiltMatrix(tiltX, tiltY) {
@@ -46,7 +48,6 @@ function createTiltMatrix(tiltX, tiltY) {
 const DEG = 20;
 const duration = 2000;
 $circle.addEventListener('click', createPlusOneEffect);
-$circle.addEventListener('touchstart', createPlusOneEffect);
 function createPlusOneEffect(event) {
     // Определяем координаты клика и немного рандомизируем их
     const x = (event.clientX || event.touches[0].clientX);
