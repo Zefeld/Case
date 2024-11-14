@@ -189,5 +189,7 @@ header nav ul li img {
 }
 
 .txt_energy {
+    margin-top: 15px;
     color: white;
+    font-size: 20px;
 }
