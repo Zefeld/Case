@@ -29,14 +29,13 @@ header nav ul {
 }
 
 .prof {
-    width: 5%;
-    height: 60%;
+    width: 10%;
+    height: 90%;
     padding: 10px;
 }
 
 .pr_bar {
-
-    width: 20%;
+    width: 30%;
     height: 20%;
     background: #24261B;
     border-radius: 50px;
@@ -74,26 +73,24 @@ header nav ul li img {
     height: 80%;
     width: 100%;
     background-color: #CBEF26;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     position: relative;
-    padding-bottom:50px
+    padding-bottom:50px;
 }
 
 .game2 {
     width: 100%;
-    height: 95%;
+    height: 98%;
     position:absolute;
     bottom:0;
     text-align: center;
     justify-items: center;
     align-items: center;
     background-color: #24261B;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
-
-
 
 .header {
     display: flex;
@@ -106,8 +103,8 @@ header nav ul li img {
     height: 50px;
     margin-right: 15px;
 }
-.footer {
 
+.footer {
     align-items: center;
     justify-content: center;
     width: 100%;
