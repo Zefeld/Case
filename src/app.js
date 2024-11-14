@@ -1,8 +1,11 @@
 const $circle = document.querySelector('#circle');
 const $score = document.querySelector('#score');
+const progressBarEnergy = document.querySelector('.pr_bar_energy'); // Ссылка на прогресс-бар энергии
+let restoreEnergyInterval; // Переменная для хранения интервала восстановления энергии
 
 function start() {
     setScore(getScore());
+    initializeEnergy(); // Инициализируем энергию при старте
 }
 
 function setScore(score) {
@@ -15,7 +18,9 @@ function getScore() {
 }
 
 function addOne() {
-    setScore(getScore() + 1);
+    if (parseFloat(progressBarEnergy.style.width) > 0) { // Проверяем, есть ли энергия
+        setScore(getScore() + 1);
+    }
 }
 
 $circle.addEventListener('click', (event) => {
@@ -25,9 +30,8 @@ $circle.addEventListener('click', (event) => {
     const offsetY = event.clientY - rect.top - rect.height / 2;
 
     const DEG = 20;
-    const tiltX = (offsetY / (rect.height / 2)) * -DEG; // Изменено
+    const tiltX = (offsetY / (rect.height / 2)) * -DEG;
     const tiltY = (offsetX / (rect.width / 2)) * DEG;
-
 
     $circle.style.setProperty('--tiltX', `${tiltX}deg`);
     $circle.style.setProperty('--tiltY', `${tiltY}deg`);
@@ -44,6 +48,10 @@ $circle.addEventListener('click', (event) => {
 
     $circle.parentElement.appendChild(plusOne);
 
+    // Уменьшаем энергию при клике
+    decreaseEnergy();
+
+    // Увеличиваем счет, если есть энергия
     addOne();
 
     setTimeout(() => {
@@ -52,38 +60,73 @@ $circle.addEventListener('click', (event) => {
 })
 
 start();
-
-let score = parseInt(localStorage.getItem('score')) || 0; // Получаем значение из localStorage или 0, если его нет
+//lvl
+let score = parseInt(localStorage.getItem('score')) || 0;
 const scoreElement = document.getElementById('score');
 const progressBarBackground = document.querySelector('.pr_bar .bg');
 
 function updateScore(newScore) {
     score = newScore;
-
-    // Предположим, максимальное количество очков для заполнения - 100
     const maxScore = 100000;
     let percentage = (score / maxScore) * 100;
 
-    // Устанавливаем ширину фона
     progressBarBackground.style.width = percentage + '%';
-
-    // Обновляем отображение счета
     scoreElement.textContent = score;
 
-    // Если процент достиг 100, сбрасываем ширину прогресс-бара
     if (percentage > 100) {
-        progressBarBackground.style.width = '0%'; // Сбрасываем ширину прогресс-бара
+        progressBarBackground.style.width = '0%';
     }
-    // Сохраняем текущее значение score в localStorage
     localStorage.setItem('score', score);
 }
 
 // Инициализируем прогресс-бар при загрузке страницы
 updateScore(score);
 
+// Функция инициализации энергии
+function initializeEnergy() {
+    progressBarEnergy.style.width = '100%'; // Устанавливаем начальное значение энергии на 100%
+    startEnergyRestoration(); // Запускаем восстановление энергии
+}
 
-// Пример увеличения счета
-document.getElementById('circle').addEventListener('click', () => {
-    updateScore(score + 1); // увеличиваем счет на 1 при клике
-});
+//energy
+// Функция уменьшения энергии
+function decreaseEnergy() {
+    let currentEnergy = parseFloat(progressBarEnergy.style.width) || 100;
+    let newEnergy = currentEnergy - 1; // Уменьшаем на 10% при каждом клике
+    if (progressBarEnergy.style.width != '0%') {
+        progressBarEnergy.style.width = newEnergy + '%';
+    }
+    console.log(typeof(progressBarEnergy.style.width))
+}
 
+// Функция восстановления энергии
+function restoreEnergy() {
+    let currentEnergy = parseFloat(progressBarEnergy.style.width) || 0;
+    if (currentEnergy < 100) {
+        let newEnergy = currentEnergy + 1; // Восстанавливаем на 10%
+        if (newEnergy > 100) {
+            newEnergy = 100; // newEnergy = 100; // Ограничиваем восстановление до 100%
+        }
+        progressBarEnergy.style.width = newEnergy + '%';
+    }
+}
+
+// Функция запуска восстановления энергии
+function startEnergyRestoration() {
+    if (!restoreEnergyInterval) {
+        restoreEnergyInterval = setInterval(() => {
+            restoreEnergy();
+        }, 2000); // Восстанавливаем каждые 20 секунд
+    }
+}
+
+// Функция остановки восстановления энергии
+function stopEnergyRestoration() {
+    clearInterval(restoreEnergyInterval);
+    restoreEnergyInterval = null; // Сбрасываем переменную интервала
+}
+
+// Восстанавливаем энергию через 2 минуты, если она не полная
+setTimeout(() => {
+    startEnergyRestoration();
+}, 120); // 120000 миллисекунд = 2 минуты
