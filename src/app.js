@@ -52,3 +52,10 @@ $circle.addEventListener('click', (event) => {
 })
 
 start();
+
+const bg = document.querySelector('.bg');
+
+bg.addEventListener('click', () => {
+    const value = Math.floor(math.random() * 100);
+    bg.style.setProperty("--bg", `${value}`);
+})
