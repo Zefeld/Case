@@ -110,6 +110,7 @@ function restoreEnergy() {
             newEnergy = 100; // newEnergy = 100; // Ограничиваем восстановление до 100%
         }
         progressBarEnergy.style.width = newEnergy + '%';
+        curEnergyElement.textContent = newEnergy;
     }
 }
 
