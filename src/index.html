@@ -1,55 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZOV clicker</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header>
-    
-            <img src="assets/profile.svg">
-            <div class="status">
-                <div class = "progress_bar" id="progress"></div>
-                <div class = "rang">
-                    <span id="txt">Сержант</span>
-                    <span id="num">1/15</span>
-                </div>
+    <header>
+        <img src="assets/profile.svg">
+        <div class="status">
+            <div class="progress-bar" id="progress"></div>
+            <div class="rang">
+                <span id="txt">Сержант</span>
+                <span id="num">1/15</span>
             </div>
-       
-</header>
-<div class="game">
-    <div class ="game2">
-        <div class="header">
+        </div>
+
+    </header>
+    <div class="game">
+        <div class="score-wrapper">
             <img src="assets/score.png" alt="coin">
-            <h2 class="score" id="score">0</h2>
+            <p class="score" id="score">0</p>
         </div>
         <div class="circle">
-            <div class="image" id="circle"></div>
+            <div class="coin" id="circle"></div>
         </div>
-        <div class="energy">
-            <div class="bg_energy">
-                <div class="pr_bar_energy">
-                </div>
-            </div>
-        </div>
-        <div class="txt_energy">
-            <span class="cur_energy">100</span>
-            <span class="/">/</span>
-            <span class="max_energy">100</span>
+        <div class="energy-wrapper">
+            <div class="energy-bar"></div>
+            <p><span id="energy-bar-text">100</span> / 100</p>
         </div>
     </div>
-</div>
-
-<footer class="menu_bar">
-    
+    </div>
+    <footer class="menu">
         <img src="assets/menu.svg" alt="menu"></li>
-       <img src="assets/shop.svg" alt="shop"></li>
+        <img src="assets/shop.svg" alt="shop"></li>
         <img src="assets/quests.svg" alt="quests"></li>
         <img src="assets/friedns.svg" alt="friedns"></li>
-    
-</footer>
-<script src="app.js" defer></script>
+    </footer>
+    <script src="app.js" defer></script>
 </body>
+
 </html>
