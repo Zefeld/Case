@@ -34,9 +34,7 @@ header {
     justify-content: center;
     align-items: center;
     justify-items: center;
-    img {
-        height: 70%;
-    }
+    
 }
 
 .status {
