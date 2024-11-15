@@ -206,10 +206,6 @@ header {
 }
 
 .menu{
-    img {
-        height: 70%;
-        width: 100%;
-    }
     display: flex;
     justify-content: center;
     align-items: center;
@@ -229,6 +225,7 @@ footer a {
     height: 100%;
     width: 100%;
     text-align: center;
+    font-size: 16px;
 }
 
 footer img {
