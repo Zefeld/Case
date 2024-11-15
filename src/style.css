@@ -214,7 +214,7 @@ header {
 footer {
     background: #31351F;
     bottom: 0;
-    height: 10%;
+    height: 12%;
     width: 100%;
     color: #7B7B7B;
     margin: 0;
@@ -223,14 +223,18 @@ footer {
 
 footer a {
     height: 100%;
-    width: 100%;
+    width: 30%;
     text-align: center;
     font-size: 16px;
 }
 
+footer a div {
+    width: 100%;
+}
+
 footer img {
-    height: 70%;
-    width: 70%;
+    height: 60%;
+    width: 100%;
 }
 
 .txt_menu {
