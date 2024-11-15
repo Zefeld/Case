@@ -20,6 +20,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
     &quot;Node.js.app.js.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Case&quot;,
@@ -33,6 +34,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Case\src\assets" />
       <recent name="C:\Case" />
       <recent name="C:\Case\zov-click\src\assets" />
     </key>
@@ -56,7 +58,8 @@
       <workItem from="1731529969631" duration="12251000" />
       <workItem from="1731586683139" duration="3555000" />
       <workItem from="1731590920488" duration="938000" />
-      <workItem from="1731615551264" duration="10408000" />
+      <workItem from="1731615551264" duration="11194000" />
+      <workItem from="1731670831730" duration="3795000" />
     </task>
     <servers />
   </component>

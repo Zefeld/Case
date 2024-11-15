@@ -1,14 +1,18 @@
 html,
 body {
     margin: 0;
-    min-height: 100vh;
     height: 100%;
     padding: 0;
     width: 100%;
     background: black;
     user-select: none;
-    overflow: hidden;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 img {
     user-select: none !important;
 
@@ -98,16 +102,6 @@ header {
     margin-right: 15px;
 }
 
-.menu{
-    height: 50px;
-    img {
-        height: 100%;
-    }
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
 .score-wrapper {
     display: flex;
     flex-direction: row;
@@ -127,7 +121,7 @@ header {
 }
 
 .circle {
-    width: 100vw;
+    width: 100%;
     --size: clamp(200px, 80vw, 300px);
     height: var(--size);
     display: flex;
@@ -136,6 +130,8 @@ header {
     transform-style: preserve-3d;
 }
 .coin {
+    --tiltX: 0deg;
+    --tiltY: 0deg;
     height: 100%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
@@ -207,4 +203,39 @@ header {
     top: 0;
     left: 0;
     background-color: #cbef26;
+}
+
+.menu{
+    img {
+        height: 70%;
+        width: 100%;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background: #31351F;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    color: #7B7B7B;
+    margin: 0;
+    padding: 0;
+}
+
+footer a {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+footer img {
+    height: 70%;
+    width: 70%;
+}
+
+.txt_menu {
+    color: #fff;
 }
