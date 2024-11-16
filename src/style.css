@@ -107,9 +107,13 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 .score-wrapper img {
     height: 60px;
+    display: block;
+    filter: drop-shadow(2px 2px 2px #cbef26); /* Создание тени */
+
 }
 .score-wrapper p {
     color: white;
@@ -118,6 +122,7 @@ header {
     user-select: none;
     height: 36px;
     margin: 0;
+    text-shadow: 2px 2px 4px #CBEF26;
 }
 
 .circle {

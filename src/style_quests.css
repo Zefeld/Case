@@ -1,0 +1,88 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    width: 100%;
+    background: black;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.game {
+    margin-top: 20px;
+    height: 100%;
+    width: 100%;
+    /* background-color: #CBEF26; */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px;
+    box-shadow: 0px -20px 0px 0px #cbef26;
+    background-color: #24261b;
+}
+
+.every_day {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    color: #fff;
+    font-size: 30px;
+    width: 95%;
+    height: 20%;
+}
+
+#every_day_tasks{
+    margin-top: 15px;
+    width: 100%;
+    height: 70%;
+    background-color: #4F582D;
+    border-radius: 20px;
+    box-shadow: 2px 4px 4px #cbef26;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background: #31351F;
+    bottom: 0;
+    height: 12%;
+    width: 100%;
+    color: #7B7B7B;
+    margin: 0;
+    padding: 0;
+}
+
+footer a {
+    height: 100%;
+    width: 30%;
+    text-align: center;
+    font-size: 16px;
+}
+
+footer a div {
+    width: 100%;
+}
+
+footer img {
+    height: 60%;
+    width: 100%;
+}
+
+.txt_quests {
+    color: #fff;
+}
