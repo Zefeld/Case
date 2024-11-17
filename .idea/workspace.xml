@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6845a740-1791-4d6e-b32d-519f04e5298c" name="Changes" comment="" />
+    <list default="true" id="6845a740-1791-4d6e-b32d-519f04e5298c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/RUTUBE.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/VK Logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/kinopoisk.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/vk_video.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/yandex-music.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/quests.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/quests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style_quests.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style_quests.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +28,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -26,24 +39,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.index.html.executor": "Run",
-    "Node.js.app.js.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Case",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.app.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Documents/GitHub/Case&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Documents\GitHub\Case\src\assets" />
       <recent name="C:\Case\src\assets" />
       <recent name="C:\Case" />
       <recent name="C:\Case\zov-click\src\assets" />
@@ -71,6 +85,8 @@
       <workItem from="1731615551264" duration="11194000" />
       <workItem from="1731670831730" duration="6189000" />
       <workItem from="1731714621238" duration="3011000" />
+      <workItem from="1731767375656" duration="6938000" />
+      <workItem from="1731847017573" duration="2567000" />
     </task>
     <servers />
   </component>
