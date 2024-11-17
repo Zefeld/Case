@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6845a740-1791-4d6e-b32d-519f04e5298c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/RUTUBE.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/VK Logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/arrow.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/kinopoisk.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/vk_video.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/yandex-music.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quests.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/quests.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style_quests.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style_quests.css" afterDir="false" />
-    </list>
+    <list default="true" id="6845a740-1791-4d6e-b32d-519f04e5298c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,7 +76,7 @@
       <workItem from="1731670831730" duration="6189000" />
       <workItem from="1731714621238" duration="3011000" />
       <workItem from="1731767375656" duration="6938000" />
-      <workItem from="1731847017573" duration="2567000" />
+      <workItem from="1731847017573" duration="3324000" />
     </task>
     <servers />
   </component>
