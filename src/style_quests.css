@@ -32,6 +32,7 @@ p {
     background-color: #24261b;
     max-height: 100vh;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .every_day {
@@ -166,4 +167,69 @@ footer img {
 
 .txt_quests {
     color: #fff;
+}
+
+.every_day_nonvisibly{
+    display: grid;
+    grid-column: 3;
+    grid-row: 3;
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    background-color: #24261b;
+    bottom: 0;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: white;
+    grid-template-columns: 10% 26.6% 26.7% 26.7% 10%;
+    grid-template-rows: 15% 23.3% 23.3% 23.3% 15%;
+}
+
+.krest{
+    width: 100%;
+    height: 100%;
+    grid-column: 5;
+    grid-row: 1;
+}
+
+.krest img {
+    width: 50px;
+    height: 50px;
+}
+
+.day1{
+    grid-row: 2;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #4F582D;
+    border-radius: 30px;
+    box-shadow: 3px 3px 4px #cbef26;
+}
+
+.score_1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30%;
+}
+
+.score_1 img{
+    width: 70%;
+    height: 70%;
+}
+
+.current_day{
+    height: 40%;
+    font-size: 45px;
+}
+
+.txt_day{
+    height: 30%;
+    font-size: 30px;
 }
