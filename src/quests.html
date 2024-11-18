@@ -25,7 +25,7 @@
             </div>
             <div class="task">
                 <p class="task1">Список заданий</p>
-                <button>
+                <button id="task_one">
                     <div class="all_tasks">
                         <div class="content_every">
                             <img src="./assets/vk_video.svg" class="score">
@@ -41,7 +41,7 @@
                         <img src="./assets/arrow.svg" class="arrow">
                     </div>
                 </button>
-                <button>
+                <button id="task_two">
                     <div class="all_tasks">
                         <div class="content_every">
                             <img src="./assets/RUTUBE.svg" class="score">
@@ -57,7 +57,7 @@
                         <img src="./assets/arrow.svg" class="arrow">
                     </div>
                 </button>
-                <button>
+                <button id="task_three">
                     <div class="all_tasks">
                         <div class="content_every">
                             <img src="./assets/VK%20Logo.svg" class="score">
@@ -73,7 +73,7 @@
                         <img src="./assets/arrow.svg" class="arrow">
                     </div>
                 </button>
-                <button>
+                <button id="task_four">
                     <div class="all_tasks">
                         <div class="content_every">
                             <img src="./assets/kinopoisk.svg" class="score">
@@ -89,7 +89,7 @@
                         <img src="./assets/arrow.svg" class="arrow">
                     </div>
                 </button>
-                <button>
+                <button id="task_five">
                     <div class="all_tasks">
                         <div class="content_every">
                             <img src="./assets/yandex-music.svg" class="score">
@@ -225,8 +225,24 @@
                 <p class="current_day">12</p>
                 <p class="txt_day">День</p>
             </div>
-            <button class="claim">
+            <button id="claim">
                 <p class="txt_claim">Забрать награду</p>
+            </button>
+        </dialog>
+        <dialog id="open_taskOne">
+            <img src="assets/vk_video.svg" class="vk">
+            <p>Посмотри трансляцию канала Соловьев LIVE в VK Видео</p>
+            <div class="score_task">
+                <div>
+                    <img src="assets/score.png">
+                    <p>+</p>
+                    <p>250</p>
+                </div>
+
+            </div>
+            <a href="https://vk.com/video?z=video-220754053_456242418%2Fpl_cat_trends" class="watch">Смотреть</a>
+            <button class="claim_task">
+                <p>Проверить</p>
             </button>
         </dialog>
         <script src="tasks.js" defer>
