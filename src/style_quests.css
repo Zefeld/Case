@@ -169,7 +169,7 @@ footer img {
     color: #fff;
 }
 
-.every_day_nonvisibly{
+#open_everyDay{
     display: none;
     width: 100%;
     height: 70%;
@@ -194,7 +194,7 @@ button {
     height: 100%;
 }
 
-.krest{
+#krest{
     width: 100%;
     height: 100%;
     grid-column-start: 5;
@@ -202,7 +202,7 @@ button {
     grid-row: 1;
 }
 
-.krest img {
+#krest img {
     width: 50px;
     height: 50px;
     width: -webkit-fill-available;
@@ -312,3 +312,8 @@ button {
     align-items: center;
 }
 
+dialog {
+    padding: 0;
+    margin: 0;
+    position: fixed;
+}

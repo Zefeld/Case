@@ -173,26 +173,3 @@ function initialize() {
 }
 
 initialize();
-
-
-// Получаем элементы модального окна и кнопки
-var modal = document.getElementById("every_day_nonvisibly");
-var btn = document.getElementById("every_day_tasks");
-var span = document.getElementsByClassName("krest")[0];
-
-// Открыть модальное окно при нажатии на кнопку
-btn.onclick = function() {
-    modal.style.display = "grid";
-}
-
-// Закрыть модальное окно при нажатии на элемент <span>
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// Закрыть модальное окно при нажатии вне его содержимого
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
