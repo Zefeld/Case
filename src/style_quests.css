@@ -312,7 +312,11 @@ button {
     align-items: center;
 }
 
-#open_taskOne{
+#open_taskOne,
+#open_taskTwo,
+#open_taskThree,
+#open_taskFour,
+#open_taskFive{
     display: none;
     width: 100%;
     height: 70%;
@@ -369,7 +373,7 @@ button {
     justify-items: center;
 }
 
-.claim_task{
+.claim_task, .claim_task2, .claim_task3, .claim_task4, .claim_task5{
     border-radius: 30px;
     margin: 20px;
     height: 15%;
@@ -377,3 +381,46 @@ button {
     border: 3px solid #CBEF26;
 }
 
+#open_taskTwo .vk{
+    padding-top: 15px;
+    width: 100%;
+    height: 20%;
+}
+
+#open_taskTwo p{
+    padding: 10px;
+    font-size: 25px;
+}
+
+#open_taskThree .vk{
+    padding-top: 15px;
+    width: 100%;
+    height: 20%;
+}
+
+#open_taskThree p{
+    padding: 10px;
+    font-size: 25px;
+}
+
+#open_taskFour .vk{
+    padding-top: 15px;
+    width: 100%;
+    height: 20%;
+}
+
+#open_taskFour p{
+    padding: 10px;
+    font-size: 25px;
+}
+
+#open_taskFive .vk{
+    padding-top: 15px;
+    width: 100%;
+    height: 20%;
+}
+
+#open_taskFive p{
+    padding: 10px;
+    font-size: 25px;
+}
