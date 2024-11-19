@@ -214,8 +214,11 @@ button {
     text-align: center;
     align-items: center;
     background-color: #4F582D;
-    border-radius: 30px;
+    border-radius: 20px;
     box-shadow: 3px 3px 4px #cbef26;
+    width: 80%;
+    height: 80%;
+    justify-self: center;
 }
 
 .day1{
