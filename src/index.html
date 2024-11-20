@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZOV clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="assets/profile.svg" height="50" width="50" alt="profile">
+        <div class="status">
+            <div class="progress-bar" id="progress"></div>
+            <div class="rang">
+                <span id="txt">Сержант</span>
+                <span id="num">1/15</span>
+            </div>
+        </div>
+
+    </header>
+    <div class="game">
+        <div class="score-wrapper">
+            <img src="assets/score.png" height="60" width="67" alt="coin">
+            <p class="score" id="score">0</p>
+        </div>
+        <div class="circle">
+            <div class="coin" id="circle"></div>
+        </div>
+        <div class="energy-wrapper">
+            <div class="energy-bar"></div>
+            <p><span class="ammo"><img src="./assets/ammo.svg" width="20px" height="20px"></span><span id="energy-bar-text">100</span> / 100</p>
+        </div>
+    </div>
+    </div>
+    <footer class="menu">
+        <a href="index.html">
+            <img src="assets/menu_white.svg" alt="menu" height="50" width="50">
+            <div class="txt_menu">Меню</div>
+        </a>
+        <a href="">
+            <img src="./assets/shop.svg" alt="shop" height="50" width="50">
+            <div class="txt_shop">Улучшения</div>
+        </a>
+        <a href="quests.html">
+            <img src="./assets/quests.svg" alt="quests" height="50" width="50">
+            <div class="txt_quests">Задания</div>
+        </a>
+        <a href="">
+            <img src="./assets/friedns.svg" alt="friends" height="50" width="50">
+            <div class="txt_friends">Друзья</div>
+        </a>
+    </footer>
+    <script src="app.js" defer></script>
+</body>
+
+</html>

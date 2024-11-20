@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZOV clicker</title>
+    <link rel="stylesheet" href="style_quests.css">
+</head>
+    <body>
+        <div class="game">
+            <div class="every_day">
+                <p class="every">Ежедневный бонус</p>
+                <button class="every_day_tasks">
+                    <div id="every_day_tasks">
+                        <div class="content_every">
+                            <img src="./assets/score.png" class="score">
+                            <div class="abs">
+                                <p class="p1">Ежедневный бонус</p>
+                                <p class="p2">До 4,095</p>
+                            </div>
+                        </div>
+                        <img src="./assets/arrow.svg" class="arrow">
+                    </div>
+                </button>
+            </div>
+            <div class="task">
+                <p class="task1">Список заданий</p>
+                <button id="task_one">
+                    <div class="all_tasks">
+                        <div class="content_every">
+                            <img src="./assets/vk_video.svg" class="score">
+                            <div class="abs">
+                                <p class="p1">Посмотри видео</p>
+                                <div class="bot_sc">
+                                    <img src="./assets/score.png" class="min_sc">
+                                    <p class="p2">+250</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <img src="./assets/arrow.svg" class="arrow">
+                    </div>
+                </button>
+                <button id="task_two">
+                    <div class="all_tasks">
+                        <div class="content_every">
+                            <img src="./assets/RUTUBE.svg" class="score">
+                            <div class="abs">
+                                <p class="p1">Подпишись на канал</p>
+                                <div class="bot_sc">
+                                    <img src="./assets/score.png" class="min_sc">
+                                    <p class="p2">+250</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <img src="./assets/arrow.svg" class="arrow">
+                    </div>
+                </button>
+                <button id="task_three">
+                    <div class="all_tasks">
+                        <div class="content_every">
+                            <img src="./assets/VK%20Logo.svg" class="score">
+                            <div class="abs">
+                                <p class="p1">Подпишись на канал</p>
+                                <div class="bot_sc">
+                                    <img src="./assets/score.png" class="min_sc">
+                                    <p class="p2">+100</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <img src="./assets/arrow.svg" class="arrow">
+                    </div>
+                </button>
+                <button id="task_four">
+                    <div class="all_tasks">
+                        <div class="content_every">
+                            <img src="./assets/kinopoisk.svg" class="score">
+                            <div class="abs">
+                                <p class="p1">Посмотри сериал</p>
+                                <div class="bot_sc">
+                                    <img src="./assets/score.png" class="min_sc">
+                                    <p class="p2">+500</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <img src="./assets/arrow.svg" class="arrow">
+                    </div>
+                </button>
+                <button id="task_five">
+                    <div class="all_tasks">
+                        <div class="content_every">
+                            <img src="./assets/yandex-music.svg" class="score">
+                            <div class="abs">
+                                <p class="p1">Послушай Shaman</p>
+                                <div class="bot_sc">
+                                    <img src="./assets/score.png" class="min_sc">
+                                    <p class="p2">+500</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <img src="./assets/arrow.svg" class="arrow">
+                    </div>
+                </button>
+            </div>
+        </div>
+        <footer class="menu">
+            <a href="index.html">
+                <img src="./assets/menu.svg" alt="menu" height="50" width="50">
+                <div class="txt_menu">Меню</div>
+            </a>
+            <a href="">
+                <img src="./assets/shop.svg" alt="shop" height="50" width="50">
+                <div class="txt_shop">Улучшения</div>
+            </a>
+            <a href="quests.html">
+                <img src="./assets/quests_white.svg" alt="quests" height="50" width="50">
+                <div class="txt_quests">Задания</div>
+            </a>
+            <a href="">
+                <img src="./assets/friedns.svg" alt="friends" height="50" width="50">
+                <div class="txt_friends">Друзья</div>
+            </a>
+        </footer>
+        <dialog id="open_everyDay">
+            <button id="krest">
+                <img src="assets/krest.svg">
+            </button>
+            <div class="day1">
+                <div class="score_1">
+                    <img src="assets/score.png">
+                    <p class="sc_1">1</p>
+                </div>
+                <p class="current_day">1</p>
+                <p class="txt_day">День</p>
+            </div>
+            <div class="day2">
+                <div class="score_1">
+                    <img src="assets/score.png">
+                    <p class="sc_1">2</p>
+                </div>
+                <p class="current_day">2</p>
+                <p class="txt_day">День</p>
+            </div>
+            <div class="day3">
+                <div class="score_1">
+                    <img src="assets/score.png">
+                    <p class="sc_1">4</p>
+                </div>
+                <p class="current_day">3</p>
+                <p class="txt_day">День</p>
+            </div>
+            <div class="day4">
+                <div class="score_1">
+                    <img src="assets/score.png">
+                    <p class="sc_1">8</p>
+                </div>
+                <p class="current_day">4</p>
+                <p class="txt_day">День</p>
+            </div>
+            <div class="day5">
+                <div class="score_1">
+                    <img src="assets/score.png">
+                    <p class="sc_1">16</p>
+                </div>
+                <p class="current_day">5</p>
+                <p class="txt_day">День</p>
+            </div>
+            <div class="day6">
+                <div class="score_1">
+                    <img src="assets/score.png">
+                    <p class="sc_1">32</p>
+                </div>
+                <p class="current_day">6</p>
+                <p class="txt_day">День</p>
+            </div>
+            <div class="day7">
+                <div class="score_1">
+                    <img src="assets/score.png">
+                    <p class="sc_1">64</p>
+                </div>
+                <p class="current_day">7</p>
+                <p class="txt_day">День</p>
+            </div>
+            <div class="day8">
+                <div class="score_1">
+                    <img src="assets/score.png">
+                    <p class="sc_1">128</p>
+                </div>
+                <p class="current_day">8</p>
+                <p class="txt_day">День</p>
+            </div>
+            <div class="day9">
+                <div class="score_1">
+                    <img src="assets/score.png">
+                    <p class="sc_1">256</p>
+                </div>
+                <p class="current_day">9</p>
+                <p class="txt_day">День</p>
+            </div>
+            <div class="day10">
+                <div class="score_1">
+                    <img src="assets/score.png">
+                    <p class="sc_1">512</p>
+                </div>
+                <p class="current_day">10</p>
+                <p class="txt_day">День</p>
+            </div>
+            <div class="day11">
+                <div class="score_1">
+                    <img src="assets/score.png">
+                    <p class="sc_1">1,024</p>
+                </div>
+                <p class="current_day">11</p>
+                <p class="txt_day">День</p>
+            </div>
+            <div class="day12">
+                <div class="score_1">
+                    <img src="assets/score.png">
+                    <p class="sc_1">2,048</p>
+                </div>
+                <p class="current_day">12</p>
+                <p class="txt_day">День</p>
+            </div>
+            <button id="claim">
+                <p class="txt_claim">Забрать награду</p>
+            </button>
+        </dialog>
+        <dialog id="open_taskOne">
+            <img src="assets/vk_video.svg" class="vk">
+            <p>Посмотри трансляцию канала Соловьев LIVE в VK Видео</p>
+            <div class="score_task">
+                <div>
+                    <img src="assets/score.png">
+                    <p>+</p>
+                    <p>250</p>
+                </div>
+
+            </div>
+            <a href="https://vk.com/video?z=video-220754053_456242418%2Fpl_cat_trends" class="watch">Смотреть</a>
+            <button class="claim_task">
+                <p>Проверить</p>
+            </button>
+        </dialog>
+        <dialog id="open_taskTwo">
+            <img src="assets/RUTUBE.svg" class="vk">
+            <p>Подпишись на канал с фильмами</p>
+            <div class="score_task">
+                <div>
+                    <img src="assets/score.png">
+                    <p>+</p>
+                    <p>250</p>
+                </div>
+
+            </div>
+            <a href="https://rutube.ru/u/ru2ch/" class="watch">Смотреть</a>
+            <button class="claim_task2">
+                <p>Проверить</p>
+            </button>
+        </dialog>
+        <dialog id="open_taskThree">
+            <img src="assets/VK%20Logo.svg" class="vk">
+            <p>Подпишись на канал начинающего исполнителя</p>
+            <div class="score_task">
+                <div>
+                    <img src="assets/score.png">
+                    <p>+</p>
+                    <p>100</p>
+                </div>
+
+            </div>
+            <a href="https://vk.com/shoker1337" class="watch">Смотреть</a>
+            <button class="claim_task3">
+                <p>Проверить</p>
+            </button>
+        </dialog>
+        <dialog id="open_taskFour">
+            <img src="assets/kinopoisk.svg" class="vk">
+            <p>Посмотри сериал про советскую панк-рок группу</p>
+            <div class="score_task">
+                <div>
+                    <img src="assets/score.png">
+                    <p>+</p>
+                    <p>500</p>
+                </div>
+
+            </div>
+            <a href="https://hd.kinopoisk.ru/film/5eaba7e14cb84d529463075d0ffa0a50" class="watch">Смотреть</a>
+            <button class="claim_task4">
+                <p>Проверить</p>
+            </button>
+        </dialog>
+        <dialog id="open_taskFive">
+            <img src="assets/yandex-music.svg" class="vk">
+            <p>Подпишись на канал начинающего исполнителя</p>
+            <div class="score_task">
+                <div>
+                    <img src="assets/score.png">
+                    <p>+</p>
+                    <p>500</p>
+                </div>
+
+            </div>
+            <a href="https://music.yandex.ru/artist/9833237" class="watch">Смотреть</a>
+            <button class="claim_task5">
+                <p>Проверить</p>
+            </button>
+        </dialog>
+        <script src="tasks.js" defer>
+        </script>
+    </body>
+</html>
